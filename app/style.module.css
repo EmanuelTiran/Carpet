@@ -9,7 +9,6 @@
 .section {
     position: relative;
     top: 4rem;
-    background-color: #444d5c;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* gap: 1rem; */
