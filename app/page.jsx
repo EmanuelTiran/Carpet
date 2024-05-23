@@ -8,8 +8,8 @@ import style from './style.module.css'
 import Images from '@/components/Images'
 
 export default async function Home() {
-  unstable_noStore()
-  await new Promise(resolve => setTimeout(resolve, 7000))
+  // unstable_noStore()
+  // await new Promise(resolve => setTimeout(resolve, 7000))
   await connectToMongo()
 
   const carpets = await readCarpetsService();
@@ -26,12 +26,11 @@ export default async function Home() {
       <section className={style.section}>
         {carpets.map((carpet) => (
           <Link className={style.link} key={carpet._id} href={`/${carpet.slug}`} >
-            <Image src={carpet.image[0]} alt={carpet.title} layout="responsive" width={700} height={475} />
+            <Image src={carpet.image[0]} alt={carpet.title} width={700} height={475} />
             <h1 className={style.name}> {carpet.name} </h1>
-            <br />
-            <span className={style.description}>
+            <p className={style.description}>
               {carpet.description}
-            </span>
+            </p>
           </Link>
         ))}
       </section>
