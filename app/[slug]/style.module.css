@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailCarpet{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    align-items: start;
+    border: 1px black solid;
+}
+.img{
+
+}
