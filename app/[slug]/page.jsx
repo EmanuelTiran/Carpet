@@ -3,17 +3,18 @@ import { connectToMongo } from '@/server/connectToMongo'
 
 import style from './style.module.css'
 import Images from '@/components/Images'
+import { readProductByFieldService } from '@/server/BL/services/product.service'
 
 
-export async function generateStaticParams() {
-   await connectToMongo()
-   const all = await readCarpetsService()
-   return all.map((carpet) => ({ slug: carpet.slug }))
-}
+// export async function generateStaticParams() {
+//    await connectToMongo()
+//    const all = await readProductsService();
+//    return all.map((carpet) => ({ slug: carpet.slug }))
+// }
 
 export default async function page({ params: { slug } }) {
    await connectToMongo()
-   const carpet = await readCarpetByFieldService({ slug: slug })
+   const carpet = await readProductByFieldService({ slug: slug })
 
    return (<div className={style.container} >
 
