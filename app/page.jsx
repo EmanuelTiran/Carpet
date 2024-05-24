@@ -16,8 +16,7 @@ const carpetsJson = [
     size: "3' x 5'",
     color: 'White',
     price: 70,
-    discount: 0,
-inStock: 35, 
+    inStock: 35, 
 category: "carpet",
 
     description: 'Soft and plush faux fur area rug',
@@ -33,8 +32,7 @@ category: "carpet",
     size: "8' x 10'",
     color: 'Blue',
     price: 280,
-    discount: 0,
-inStock: 35, 
+    inStock: 35, 
 category: "carpet",
 
     description: 'Elegant vintage oriental carpet with intricate patterns',
@@ -49,8 +47,7 @@ category: "carpet",
     size: "5' x 7'",
     color: 'Black',
     price: 120,
-    discount: 0,
-inStock: 35, 
+    inStock: 35, 
 category: "carpet",
 
     description: 'Luxurious shaggy rug for a cozy feel',
@@ -66,8 +63,7 @@ category: "carpet",
     size: "5' x 8'",
     color: 'Ping&LightBlue',
     price: 110,
-    discount: 0,
-inStock: 35, 
+    inStock: 35, 
 category: "carpet",
 
     description: 'Moroccan-inspired diamond pattern rug',
@@ -83,16 +79,15 @@ category: "carpet",
     size: "6' x 9'",
     color: 'Gray&Beige',
     price: 150,
-    discount: 0,
-inStock: 35, 
+    inStock: 35, 
 category: "carpet",
 
     description: 'Contemporary geometric rug for a stylish look',
     images:
- ['https://www.carpetim.co.il/wp-content/uploads/2020/03/%D7%A4%D7%99%D7%A8%D7%99%D7%9C%D7%98%D7%99-2025-300x300.jpg.webp',
-      'https://www.carpetim.co.il/wp-content/uploads/2020/03/whatsapp-image-2023-06-15-at-10_optimized.59.35-300x300.jpeg.webp',
-      'https://www.carpetim.co.il/wp-content/uploads/2020/03/whatsapp-image-2023-06-15-at-10_optimized.59.35-300x300.jpeg.webp'
-    ],
+      ['https://www.carpetim.co.il/wp-content/uploads/2020/03/%D7%A4%D7%99%D7%A8%D7%99%D7%9C%D7%98%D7%99-2025-300x300.jpg.webp',
+        'https://www.carpetim.co.il/wp-content/uploads/2020/03/whatsapp-image-2023-06-15-at-10_optimized.59.35-300x300.jpeg.webp',
+        'https://www.carpetim.co.il/wp-content/uploads/2020/03/whatsapp-image-2023-06-15-at-10_optimized.59.35-300x300.jpeg.webp'
+      ],
     __v: 0
   },
   {
@@ -101,9 +96,9 @@ category: "carpet",
     size: "9' x 12'",
     color: 'Fire',
     price: 200,
-    discount: 0,
     inStock: 35, 
-    category: "carpet",
+category: "carpet",
+
     description: 'Classic striped flatweave rug for a timeless look',
     images: ['https://www.carpetim.co.il/wp-content/uploads/2020/02/%D7%90%D7%95%D7%98%D7%A0%D7%98%D7%99%D7%A7-1922-300x300.jpg.webp',
       'https://www.carpetim.co.il/wp-content/uploads/2020/02/%D7%A1%D7%95%D7%9C-1-300x300.jpeg.webp',
@@ -117,9 +112,8 @@ category: "carpet",
     size: "4' x 6'",
     color: 'Multi-color',
     price: 90,
-    discount: 0,
     inStock: 35, 
-    category: "carpet",
+category: "carpet",
 
     description: 'Bohemian style rug with tassel details',
     images: ['https://www.carpetim.co.il/wp-content/uploads/2022/07/2-1858-2-300x300.jpg',
@@ -134,7 +128,7 @@ export default async function Home() {
   // unstable_noStore()
   // await new Promise(resolve => setTimeout(resolve, 7000))
   await connectToMongo()
-  // createProduct(carpetsJson.map((h, i)=>({ ...h})))
+// createProduct(carpetsJson.map((h, i)=>({ ...h})))
 
   const carpets = await readProductsService({ category: "carpet" });
   // const carpets = await readCarpetsService();
