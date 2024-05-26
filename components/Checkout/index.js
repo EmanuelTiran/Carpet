@@ -43,33 +43,33 @@ export default function Checkout() {
         <div className={`${style.container} container mx-auto p-4`}>
             <h1 className="text-2xl font-bold mb-4">New Order</h1>
 
-            <div>
+            <div className="hidden">
                 <label className="block text-sm font-medium text-gray-700">CustomerId</label>
 
                 <input type="text" readOnly
-                    //    className="hidden"
+                       
                     name='customerId' value={'66509743c542c7a47f8ba955'} />
             </div>
 
             <form action={createOrderAction} className="space-y-4">
-                <div>
+                {/* <div>
                     <label className="block text-sm font-medium text-gray-700">Product</label>
 
                     <input type="text" readOnly
                         name='productId' value="66509743c542c7a47f8ba955" />
-                </div>
-                <div>
-                    <label className="block text-sm font-medium text-gray-700">Product</label>
+                </div> */}
+                <div className="hidden">
+                    <label className="block text-sm font-medium text-gray-700">Products</label>
 
-                    <input type="text" readOnly
+                    <input type="text" readOnly   
                         name='products' value={JSON.stringify(cart)} />
                 </div>
 
-                <div>
+                {/* <div>
                     <label className="block text-sm font-medium text-gray-700">Quantity</label>
                     <input type="number" readOnly
                         name='quantity' value={2}/>
-                </div>
+                </div> */}
 
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Total</label>
