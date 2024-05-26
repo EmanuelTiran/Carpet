@@ -1,6 +1,7 @@
 import React from 'react'
 import Navlink from '../Navlink'
 import style from './style.module.css'
+import CartBadge from '../CartBadge/imdex'
 const linksList = [
    { href: '/', text: 'Home' },
    { href: '/about', text: 'About' },
@@ -19,6 +20,9 @@ export default function Header() {
                {link.text}
             </Navlink>
          ))}
+         <div className={style.logo}>
+            <CartBadge/>
+         </div>
       </header>
    )
 }
