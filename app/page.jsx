@@ -1,4 +1,4 @@
-import HotelForm from '@/components/CarpetForm'
+import CarpetForm from '@/components/CarpetForm'
 import { readCarpetsService, createCarpetService } from '@/server/BL/services/carpet.service'
 import { connectToMongo } from '@/server/connectToMongo'
 import { unstable_noStore } from 'next/cache'
@@ -34,7 +34,6 @@ export default async function Home() {
           </Link>
         ))}
       </section>
-      <HotelForm />
 
     </div>
   )

@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* gap: 1rem; */
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     padding-right: 10vw;
@@ -26,8 +26,9 @@
 
 .section img {
     clip-path: inset(15% 0 15% 0);
-    height: 300px;
+    height: 367px;
     object-fit: contain;
+ 
 }
 
 .name {
@@ -74,4 +75,14 @@
         transform: scale(1);
         /* Return to original size */
     }
+}
+
+@media (width > 1300px) {
+
+    .section img {
+        clip-path: inset(15% 0 15% 0);
+        height: 900px;
+        object-fit: contain;
+     
+    }   
 }

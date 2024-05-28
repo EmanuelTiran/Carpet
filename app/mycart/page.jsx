@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import style from './style.module.css'
 import Images from '@/components/Images'
+import CarpetForm from '@/components/CarpetForm'
 
 export default async function Home() {
   unstable_noStore()
@@ -15,6 +16,7 @@ export default async function Home() {
 
   return (
     <div>
+      <CarpetForm />
 
     </div>
   )
