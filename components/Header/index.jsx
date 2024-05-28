@@ -3,6 +3,7 @@ import Navlink from '../Navlink'
 import style from './style.module.css'
 import Icon from '../Icon'
 
+import CartBadge from '../CartBadge/imdex'
 const linksList = [
    { href: '/', text: 'Home' },
    { href: '/about', text: 'About' },
@@ -22,6 +23,9 @@ export default function Header() {
             </Navlink>
          ))}
          <Icon className={style.icon} />
+         <div className={style.logo}>
+            <CartBadge/>
+         </div>
       </header>
    </div>
    )

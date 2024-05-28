@@ -13,12 +13,16 @@ const customerSchema = new mongoose.Schema({
             message: props => `${props.value} is not a valid phone number! Please enter exactly 10 digits.`,
         },
         required: true
-    }, address: {
+    },
+    address: {
         street: { type: String },
-        city: { type: String }
+        houseNumber: { type: Number },
+        city: { type: String },
+        state: { type: String },
+        zipCode: { type: String },
     },
     registeredAt: { type: Date, default: Date.now },
     orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }]
 });
 
-export const Customer =mongoose.models.Customer || mongoose.model('Customer', customerSchema);
+export const Customer = mongoose.models.Customer || mongoose.model('Customer', customerSchema);

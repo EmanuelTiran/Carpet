@@ -8,7 +8,6 @@ import { redirect } from "next/navigation"
 
 export const createCarpetAction = async (fd) => {
    const body = Object.fromEntries(fd)
-
    try {
       await connectToMongo()
       await createCarpetService(body)
