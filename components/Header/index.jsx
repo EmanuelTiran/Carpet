@@ -1,6 +1,9 @@
 import React from 'react'
 import Navlink from '../Navlink'
 import style from './style.module.css'
+import Icon from '../Icon'
+
+import CartBadge from '../CartBadge/imdex'
 const linksList = [
    { href: '/', text: 'Home' },
    { href: '/about', text: 'About' },
@@ -11,7 +14,7 @@ const linksList = [
 
 export default function Header() {
 
-   return (
+   return (<div>
       <header className={style.header}>
          <div className={style.lightning}></div>
          {linksList.map((link) => (
@@ -19,6 +22,11 @@ export default function Header() {
                {link.text}
             </Navlink>
          ))}
+         <Icon className={style.icon} />
+         <div className={style.logo}>
+            <CartBadge/>
+         </div>
       </header>
+   </div>
    )
 }
