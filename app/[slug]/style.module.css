@@ -3,12 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgba(0, 255, 55, 0.591) solid;
+    /* border: 2px rgba(0, 255, 55, 0.591) solid; */
 }
 
 .detailCarpet {
     /* padding: 4vh; */
-    border: 2px red solid;
+    /* border: 2px red solid; */
     display: flex;
     flex-direction: row;
     width: 75vw;
@@ -28,7 +28,7 @@
     align-items: start;
     justify-content: space-around;
     height: 50%;
-    border: 2px rgba(255, 0, 195, 0.591) solid;
+    /* border: 2px rgba(255, 0, 195, 0.591) solid; */
 }
 
 .details h2 {

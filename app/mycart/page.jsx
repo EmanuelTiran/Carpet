@@ -7,6 +7,8 @@ import Link from 'next/link'
 import style from './style.module.css'
 import Images from '@/components/Images'
 
+
+
 export default async function Home() {
   unstable_noStore()
   await new Promise(resolve => setTimeout(resolve, 7000))
