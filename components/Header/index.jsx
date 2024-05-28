@@ -3,7 +3,7 @@ import Navlink from '../Navlink'
 import style from './style.module.css'
 import Icon from '../Icon'
 
-import CartBadge from '../CartBadge/imdex'
+import CartBadge from '../CartBadge'
 const linksList = [
    { href: '/', text: 'Home' },
    { href: '/about', text: 'About' },

@@ -2,12 +2,16 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import style from './style.module.css';
+import Cookies  from 'js-cookie';
+
 
 const CartBadge = () => {
   const [cartItemCount, setCartItemCount] = useState(0);
 
   useEffect(() => {
-    const cart = localStorage.getItem('cart');
+    const cart = Cookies.get("cart");
+    // console.log(cert);
+    // const cart2 = document.cookies.getItem('cart');
     if (cart) {
       let itemCount = 0;
       const parsedCart = JSON.parse(cart);

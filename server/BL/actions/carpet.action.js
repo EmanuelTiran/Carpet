@@ -4,6 +4,7 @@ import { connectToMongo } from "@/server/connectToMongo"
 import { createCarpetService } from "../services/carpet.service"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 
 
 export const createCarpetAction = async (fd) => {
@@ -17,3 +18,8 @@ export const createCarpetAction = async (fd) => {
    }
    redirect('/')
 } 
+
+export const saveCookie = async (bla)=>{
+   console.log("cookies:",cookies().get("name"))
+   
+}

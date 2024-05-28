@@ -15,9 +15,9 @@ const customerSchema = new mongoose.Schema({
         required: true
     },
     address: {
-        street: { type: String },
-        houseNumber: { type: Number },
-        city: { type: String },
+        street: { type: String, required: true },
+        houseNumber: { type: Number, required: true },
+        city: { type: String, required: true },
         state: { type: String },
         zipCode: { type: String },
     },

@@ -10,6 +10,8 @@ import { readProductsService } from '@/server/BL/services/product.service'
 import { createCustomerService } from '@/server/BL/services/customer.service'
 import { createOrder } from '@/server/DL/controllers/order.controller'
 import AddToCartBtn from '@/components/AddToCartBtn'
+import { cookies } from 'next/headers'
+import { saveCookie } from '@/server/BL/actions/carpet.action'
 
 const carpetsJson = [
   {
@@ -303,7 +305,7 @@ export default async function Home() {
   // createProduct(carpetsJson.map((h, i)=>({ ...h})))
   // createCustomerService(customersJson.map((c, i)=>({ ...c})))
   // createOrder(orders.map((c, i)=>({ ...c})))
-
+  // const cookiesss = cookies().getAll()
   const carpets = await readProductsService({ category: "carpet" });
   // const carpets = await readCarpetsService();
   const images = ['/img/logo carpet.jpg', '/img/background picture.jpg']
@@ -328,7 +330,8 @@ export default async function Home() {
           </Link>
          </span>
         ))}
-        
+        {/* <form action={saveCookie}><button type="submit">asdfasdf</button></form> */}
+        {/* <div>{JSON.stringify(cookiesss)}</div> */}
       </section>
     </div>
   )
