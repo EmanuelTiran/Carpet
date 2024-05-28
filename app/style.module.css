@@ -11,21 +11,20 @@
     top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 1rem; */
     width: 100%;
     justify-content: center;
     align-items: center;
     padding-right: 10vw;
     padding-left: 10vw;
-    gap: 15px;
+    gap: 0rem 4rem;
     white-space: nowrap;
     text-overflow: ellipsis; 
 }
 
 .section img {
-    clip-path: inset(15% 0 15% 0);
+    clip-path: inset(10% 0 10% 0);
     height: 300px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .name {

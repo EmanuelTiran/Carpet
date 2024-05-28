@@ -326,7 +326,6 @@ export default async function Home() {
               {product.description}
             </p>
           </Link>
-          <AddToCartBtn productId={product._id}/>
          </span>
         ))}
         

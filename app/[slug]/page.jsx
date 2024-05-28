@@ -4,6 +4,7 @@ import { connectToMongo } from '@/server/connectToMongo'
 import style from './style.module.css'
 import Images from '@/components/Images'
 import { readProductByFieldService } from '@/server/BL/services/product.service'
+import AddToCartBtn from '@/components/AddToCartBtn'
 
 
 // export async function generateStaticParams() {
@@ -26,6 +27,7 @@ export default async function page({ params: { slug } }) {
                <p className={style.description}>{carpet.description}</p>
                <p className={style.price}>Price: {carpet.price}</p>
             </span>
+            <AddToCartBtn productId={carpet._id}/>
          </div>
       </div>
    )

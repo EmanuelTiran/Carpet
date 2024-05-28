@@ -5,7 +5,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding: 2rem;
+    padding: 0.5rem;
     position: fixed;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(247, 170, 5, 0.5);
@@ -19,6 +19,9 @@
     filter: blur(10px);
     transform: rotate(-180deg);
     animation: lightningAnimation 10s linear forwards;
+}
+
+.cart{
 }
 
 @keyframes lightningAnimation {

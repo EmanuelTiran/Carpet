@@ -9,23 +9,23 @@ const linksList = [
    { href: '/about', text: 'About' },
    { href: '/admin/dashboard', text: 'Dashboard' },
    { href: '/recommendations', text: 'Recommendations' },
-   { href: '/mycart', text: 'My Cart' },
 ]
 
 export default function Header() {
 
    return (<div>
       <header className={style.header}>
-         <div className={style.lightning}></div>
          {linksList.map((link) => (
             <Navlink key={link.href} href={link.href}>
                {link.text}
             </Navlink>
          ))}
          <Icon className={style.icon} />
-         <div className={style.logo}>
-            <CartBadge/>
-         </div>
+
+         <Navlink href={'/mycart'}>
+            <CartBadge className={style.cart}/>
+         </Navlink>
+         <div className={style.lightning}></div>
       </header>
    </div>
    )

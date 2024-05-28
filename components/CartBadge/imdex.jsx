@@ -22,7 +22,7 @@ const CartBadge = () => {
 
   return (
     <div className={style.cartBadge}>
-      <span style={{fontSize: "40px"}} className={style.cartIcon} >🛒</span>
+      <span className={style.cartIcon} >🛒</span>
       <span className={style.badgeCount}>{cartItemCount}</span>
     </div>
   );
