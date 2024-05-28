@@ -5,6 +5,7 @@ import style from './style.module.css'
 import Images from '@/components/Images'
 import { readProductByFieldService } from '@/server/BL/services/product.service'
 import AddToCartBtn from '@/components/AddToCartBtn'
+import Link from 'next/link'
 
 
 // export async function generateStaticParams() {
@@ -26,6 +27,7 @@ export default async function page({ params: { slug } }) {
                <h2>{carpet.name}</h2>
                <p className={style.description}>{carpet.description}</p>
                <p className={style.price}>Price: {carpet.price}</p>
+               <Link href="/"><button className={style.button}>Back to home</button></Link>
             </span>
             <AddToCartBtn productId={carpet._id}/>
          </div>

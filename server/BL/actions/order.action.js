@@ -8,6 +8,7 @@ import { createCustomerService } from "../services/customer.service"
 import { readCustomerByFieldService } from "../services/customer.service"
 import { readCustomer } from "@/server/DL/controllers/customer.controller"
 import { createOrderService } from "../services/order.service"
+import { cookies } from "next/headers";
 
 
 export const createOrderAction = async (fd) => {
@@ -44,12 +45,15 @@ export const createOrderAction = async (fd) => {
             Notes: body.notes,
         }
         const newOrder = await createOrderService(order);
-        // console.log(newOrder.id);
-        customer.orders.push(newOrder.id);
-        customer.save()
-        revalidatePath('/order')
+        if (newOrder.id) {
+            console.log(newOrder.id)
+            customer.orders.push(newOrder.id);
+            customer.save()
+            cookies().delete('cart')
+        }
+        revalidatePath('/')
     } catch (error) {
         console.log({ error })
     }
-    // redirect('/')
+    redirect('/')
 } 

@@ -40,26 +40,26 @@ const AddToCartBtn = ({ productId }) => {
 
   if (!mounted) return     <div className={style.container1}>
   <span className={style.container2}>
-    <button disabled onClick={() => setQuantity(quantity + 1)}>+</button>
+    <button className={style.button} disabled onClick={() => setQuantity(quantity + 1)}>+</button>
      <span >0</span>
-    <button onClick={() => setQuantity(quantity - 1)} disabled>-</button>
+    <button className={style.button} onClick={() => setQuantity(quantity - 1)} disabled>-</button>
   </span>
   <span className={style.container2}>
-    <button disabled onClick={() => setQuantity(0)}>Remove</button>
-    <button disabled onClick={() => setQuantity(quantity + 1)}>Add</button>
+    <button className={style.button} disabled onClick={() => setQuantity(0)}>Remove</button>
+    <button className={style.button} disabled onClick={() => setQuantity(quantity + 1)}>Add</button>
   </span>
 </div>
 
   return (
     <div className={style.container1}>
       <span className={style.container2}>
-        <button onClick={() => setQuantity(quantity + 1)}>+</button>
+        <button className={style.button} onClick={() => setQuantity(quantity + 1)}>+</button>
          <span >{quantity}</span>
-        <button onClick={() => setQuantity(quantity - 1)} disabled={quantity === 0}>-</button>
+        <button className={style.button} onClick={() => setQuantity(quantity - 1)} disabled={quantity === 0}>-</button>
       </span>
       <span className={style.container2}>
-        <button onClick={() => setQuantity(0)}>Remove</button>
-        <button onClick={() => setQuantity(quantity + 1)}>Add</button>
+        <button className={style.button} onClick={() => setQuantity(0)}>Remove</button>
+        <button className={style.button} onClick={() => setQuantity(quantity + 1)}>Add</button>
       </span>
     </div>
   );

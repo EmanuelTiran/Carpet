@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     /* border: 2px rgba(0, 255, 55, 0.591) solid; */
 }
 
@@ -28,6 +29,7 @@
     align-items: start;
     justify-content: space-around;
     height: 50%;
+    gap: 10px;
     /* border: 2px rgba(255, 0, 195, 0.591) solid; */
 }
 
@@ -45,4 +47,10 @@
     font-size: 20px;
     font-weight: 400;
    
+}
+
+.button{
+    border: 3px solid var(--orange-yellow);
+    border-radius: 5px;
+    padding: 13px;
 }

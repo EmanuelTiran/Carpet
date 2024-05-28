@@ -11,5 +11,14 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    
     color: var(--orange-yellow);
+}
+
+.button{
+    border: 3px solid var(--orange-yellow);
+    border-radius: 15px;
+    padding: 13px;
+    background-color: var(--orange-yellow-lite);
+   
 }

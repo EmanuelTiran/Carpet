@@ -10,20 +10,11 @@ import Checkout from '@/components/Checkout'
 
 
 
-export default async function Home() {
+export default async function MyCart() {
   unstable_noStore()
   await new Promise(resolve => setTimeout(resolve, 7000))
   await connectToMongo()
    
-
-  
-
-
-
-
-
-
-
   return (
     <div>
       <Checkout />
