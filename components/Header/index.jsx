@@ -13,20 +13,23 @@ const linksList = [
 
 export default function Header() {
 
-   return (<div>
+   return (
       <header className={style.header}>
-         {linksList.map((link) => (
-            <Navlink key={link.href} href={link.href}>
-               {link.text}
-            </Navlink>
-         ))}
-         <Icon className={style.icon} />
+         {/* <span style={{ display: "flex", gap: "20px" }}> */}
+            {linksList.map((link) => (
+               <Navlink key={link.href} href={link.href}>
+                  {link.text}
+               </Navlink>
+            ))}
+         {/* </span> */}
 
-         <Navlink href={'/mycart'}>
-            <CartBadge className={style.cart}/>
-         </Navlink>
+         {/* <span style={{border: "solid 3px red", display: "flex", gap: "20px"}}> */}
+            <Navlink href={'/mycart'}>
+               <CartBadge  />
+            </Navlink>
+            <Icon />
+         {/* </span> */}
          <div className={style.lightning}></div>
       </header>
-   </div>
    )
 }

@@ -10,15 +10,6 @@ export default async function Checkout() {
     const ids = cart.map(product => product.productId)
     const detailsCarpets = await readProductsService({ _id: { $in: ids } })
     const totalCost = calculateTotalPrice(detailsCarpets, cart);
-
-    return (
-        <>
-            <CartDetails  detailsCarpets={detailsCarpets} />
-            <OrderForm cart={cart} totalCost={totalCost} />
-        </>
-    )
-}
-
 // הכנת מערך מוצרים עבור הזמנה
 function getCartProductsForCheckout() {
     const cartData = cookies().get('cart');
@@ -41,7 +32,6 @@ function getCartProductsForCheckout() {
     }
     return products;
 }
-
 // חישוב מחיר עסקה כולל
 function calculateTotalPrice(catalog, cart) {
     let totalPrice = 0;
@@ -62,3 +52,13 @@ function calculateTotalPrice(catalog, cart) {
     console.log(totalPrice);
     return totalPrice;
 }
+    return (
+        <>
+            <OrderForm cart={cart} totalCost={totalCost} />
+            <CartDetails  detailsCarpets={detailsCarpets} />
+        </>
+    )
+}
+
+
+

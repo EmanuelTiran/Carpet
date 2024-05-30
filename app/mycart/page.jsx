@@ -16,7 +16,7 @@ export default async function MyCart() {
   await connectToMongo()
    
   return (
-    <div>
+    <div className={style.container}>
       <Checkout />
     </div>
   )

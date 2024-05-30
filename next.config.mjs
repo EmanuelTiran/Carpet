@@ -4,6 +4,9 @@ const nextConfig = {
       remotePatterns: [
          {
             hostname: 'www.carpetim.co.il',
+           },
+         {
+            hostname: 'tzemer.co.il',
          },
       ],
    },
