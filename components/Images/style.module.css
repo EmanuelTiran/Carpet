@@ -1,7 +1,7 @@
 .container {
         display: flex;
         flex-direction: row;
-        width: 50vw;
+        /* width: 50vw; */
         align-items: start;
 }
 

@@ -13,7 +13,7 @@ export default async function Checkout() {
 
     return (
         <>
-            <CartDetails detailsCarpets={detailsCarpets} />
+            <CartDetails  detailsCarpets={detailsCarpets} />
             <OrderForm cart={cart} totalCost={totalCost} />
         </>
     )

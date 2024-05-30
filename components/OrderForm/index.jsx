@@ -104,7 +104,7 @@ export default function OrderForm({totalCost,cart}) {
         <div>
             <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-600"
+                className={style.button}
             >
                 Order
             </button>
