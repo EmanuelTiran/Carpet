@@ -10,20 +10,20 @@ const cookieStore = cookies()
 
 export async function generate(admin) {
     let token = jwt.sign(admin, SECRET, { expiresIn: "200m" });
+    console.log("______________________________________________");
     return `Bearer ${token}`
 }
 
 export const loginAction = async (fd) => {
     "use server"
     let body = Object.fromEntries(fd)
-    const admin = {email: body.email, password: body.password}
-    console.log( admin);
+    const admin = { email: body.email, password: body.password }
     let token;
     try {//my to do == >
         if (admin.email == EMAIL && admin.password == PASSWORD) {
-           token = await generate(admin);
-            console.log(token);
-            cookies().set('token',token)
+            token = await generate(admin);
+            console.log({token},"_________________________________________");
+            cookies().set('token', token)
         }
         else {
             // redirect('/')
@@ -31,23 +31,23 @@ export const loginAction = async (fd) => {
     } catch (error) {
         console.log({ error })
     }
-    token&&redirect('/admin/dashboard')
-    
+    token && redirect('/admin/dashboard')
+
 }
 
 
 export async function authAction() {
-    "use server"    
+    "use server"
     try {
         let token = cookies().get('token');
         console.log("trtretret");
-        if(!token) throw "no token provided"
-        if(!token.value) return false;
+        if (!token) throw "no token provided"
+        if (!token.value) return false;
         token = token.value.split('Bearer ')[1] || "null";
         const adminFromToken = jwt.verify(token, SECRET);
-        if(!adminFromToken) throw "not correct"
+        if (!adminFromToken) throw "not correct"
         if (adminFromToken.email == EMAIL && adminFromToken.password == PASSWORD) {
-            console.log({adminFromToken})
+            console.log({ adminFromToken })
             return true;
         }
         else {
@@ -56,7 +56,7 @@ export async function authAction() {
             return false;
         }
     }
-    catch(e) {
+    catch (e) {
         console.log(e);
 
     }
