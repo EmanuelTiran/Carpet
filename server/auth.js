@@ -35,11 +35,6 @@ async function auth(req, res, next) {
         res.sendStatus(401)
     }
 }
-
-
-
-
-
 module.exports = {
     validate,
     generate,

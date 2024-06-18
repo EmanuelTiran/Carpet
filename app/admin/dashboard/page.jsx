@@ -8,11 +8,10 @@ import style from "./style.module.css"
 export default async function Dashboard() {
   // const cookieStore = cookies()
   const isAdmin = await authAction();
-  console.log(isAdmin);
+  console.log({isAdmin});
   return (
     <>
       {isAdmin ?
-
         <span className={style.container}>
           <ProductsForm />
           <OrderList />

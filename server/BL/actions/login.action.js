@@ -10,7 +10,6 @@ const cookieStore = cookies()
 
 export async function generate(admin) {
     let token = jwt.sign(admin, SECRET, { expiresIn: "200m" });
-    console.log("______________________________________________");
     return `Bearer ${token}`
 }
 
@@ -19,10 +18,9 @@ export const loginAction = async (fd) => {
     let body = Object.fromEntries(fd)
     const admin = { email: body.email, password: body.password }
     let token;
-    try {//my to do == >
+    try {
         if (admin.email == EMAIL && admin.password == PASSWORD) {
             token = await generate(admin);
-            console.log({token},"_________________________________________");
             cookies().set('token', token)
         }
         else {
@@ -40,7 +38,6 @@ export async function authAction() {
     "use server"
     try {
         let token = cookies().get('token');
-        console.log("trtretret");
         if (!token) throw "no token provided"
         if (!token.value) return false;
         token = token.value.split('Bearer ')[1] || "null";
