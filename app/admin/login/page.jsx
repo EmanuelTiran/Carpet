@@ -1,16 +1,10 @@
 "use server"
-const jwt = require('jsonwebtoken');
-
 import { loginAction } from '@/server/BL/actions/login.action';
-import { cookies } from 'next/headers'
 
 
 export default async function Login() {
-  const cookieStore = cookies()
-
 
   return (<>
-
     <form action={loginAction} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-gray-700">Product ID</label>

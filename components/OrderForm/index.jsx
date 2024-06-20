@@ -1,22 +1,36 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
+import { useFormState } from 'react-dom'
 import style from "./style.module.css"
 import { createOrderAction } from "@/server/BL/actions/order.action"
+import { useCart } from '@/context/CartContext'
+
 
 export default function OrderForm({ totalCost, cart }) {
+    const { updateCart } = useCart();
+   
+
+    const [state, formAction] = useFormState(createOrderAction)
+
+    useEffect(() => {
+        if(state?.success){
+            alert(state.message);
+            updateCart({})
+        }
+    },[state])
+
+   
     return (
         <div className={`${style.container} p-4 `}>
-
             <h1 className="text-2xl font-bold mb-4">New Order</h1>
-
             <div className="hidden">
                 <label className="block text-sm font-medium text-gray-700">CustomerId</label>
-
                 <input type="text" readOnly
-
                     name='customerId' value={'66509743c542c7a47f8ba955'} />
             </div>
 
-            <form action={createOrderAction} className="space-y-4 ">
+            <form action={formAction} className="space-y-4 ">
                 <div className="hidden">
                     <label className="block text-sm font-medium text-gray-700">Products</label>
 
@@ -113,3 +127,7 @@ export default function OrderForm({ totalCost, cart }) {
         </div>
     )
 }
+
+
+
+

@@ -10,7 +10,8 @@ export default async function Checkout() {
     const ids = cart.map(product => product.productId)
     const detailsCarpets = await readProductsService({ _id: { $in: ids } })
     const totalCost = calculateTotalPrice(detailsCarpets, cart);
-// הכנת מערך מוצרים עבור הזמנה
+
+    // הכנת מערך מוצרים עבור הזמנה
 function getCartProductsForCheckout() {
     const cartData = cookies().get('cart');
     // console.log(cartData.value);

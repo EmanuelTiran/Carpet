@@ -1,5 +1,4 @@
 "use server"
-import { connectToMongo } from "@/server/connectToMongo"
 import { cookies } from 'next/headers'
 import { redirect } from "next/navigation";
 const jwt = require('jsonwebtoken');
@@ -16,12 +15,14 @@ export async function generate(admin) {
 export const loginAction = async (fd) => {
     "use server"
     let body = Object.fromEntries(fd)
-    const admin = { email: body.email, password: body.password }
+    const admin = { email: body.email.toLowerCase(), password: body.password }
     let token;
     try {
-        if (admin.email == EMAIL && admin.password == PASSWORD) {
+        if (admin.email == EMAIL.toLowerCase() && admin.password == PASSWORD) {
             token = await generate(admin);
             cookies().set('token', token)
+            console.log("❤️❤️❤️❤️❤️❤️");
+            
         }
         else {
             // redirect('/')

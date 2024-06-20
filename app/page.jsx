@@ -13,6 +13,7 @@ import AddToCartBtn from '@/components/AddToCartBtn'
 import { cookies } from 'next/headers'
 import { saveCookie } from '@/server/BL/actions/carpet.action'
 
+
 const carpetsJson = [
   {
     name: 'Faux Fur Area Rug',
@@ -132,91 +133,7 @@ const carpetsJson = [
     ],
     __v: 0
   },
-  {
-    name: 'Scandinavian Wool Rug',
-    slug: 'scandinavian-wool-rug',
-    size: "7' x 10'",
-    color: 'White&Gray',
-    price: 300,
-    discount: 0,
-    inStock: 12,
-    category: "carpet",
-    description: 'Soft and warm Scandinavian wool rug for a cozy and stylish look',
-    images: [
-      'https://www.example.com/images/rug/scandinavian-wool-1.jpg',
-      'https://www.example.com/images/rug/scandinavian-wool-2.jpg',
-      'https://www.example.com/images/rug/scandinavian-wool-3.jpg'
-    ],
-    __v: 0
-  },
-  {
-    name: 'Low Pile Moroccan Rug',
-    slug: 'low-pile-moroccan-rug',
-    size: "5' x 8'",
-    color: 'Teal',
-    price: 140,
-    discount: 0,
-    inStock: 28,
-    category: "carpet",
-    description: 'Low pile Moroccan rug with intricate geometric patterns',
-    images: [
-      'https://www.example.com/images/rug/low-pile-moroccan-1.jpg',
-      'https://www.example.com/images/rug/low-pile-moroccan-2.jpg',
-      'https://www.example.com/images/rug/low-pile-moroccan-3.jpg'
-    ],
-    __v: 0
-  },
-  {
-    name: 'Modern Abstract Rug',
-    slug: 'modern-abstract-rug',
-    size: "8' x 10'",
-    color: 'Multi-color',
-    price: 220,
-    discount: 0,
-    inStock: 18,
-    category: "carpet",
-    description: 'Bold and colorful abstract rug for a statement piece',
-    images: [
-      'https://www.example.com/images/rug/modern-abstract-1.jpg',
-      'https://www.example.com/images/rug/modern-abstract-2.jpg',
-      'https://www.example.com/images/rug/modern-abstract-3.jpg'
-    ],
-    __v: 0
-  },
-  {
-    name: 'Faux Fur Cowhide Rug',
-    slug: 'faux-fur-cowhide-rug',
-    size: "6' x 9'",
-    color: 'Brown&White',
-    price: 160,
-    discount: 0,
-    inStock: 35,
-    category: "carpet",
-    description: 'Luxurious faux fur rug that adds a touch of western charm',
-    images: [
-      'https://www.example.com/images/rug/faux-fur-cowhide-1.jpg',
-      'https://www.example.com/images/rug/faux-fur-cowhide-2.jpg',
-      'https://www.example.com/images/rug/faux-fur-cowhide-3.jpg'
-    ],
-    __v: 0
-  },
-  {
-    name: 'Washable Kitchen Mat',
-    slug: 'washable-kitchen-mat',
-    size: "2' x 3'",
-    color: 'Gray',
-    price: 30,
-    discount: 0,
-    inStock: 50,
-    category: "carpet",
-    description: 'Practical and washable kitchen mat for added comfort',
-    images: [
-      'https://www.example.com/images/rug/washable-kitchen-1.jpg',
-      'https://www.example.com/images/rug/washable-kitchen-2.jpg',
-      'https://www.example.com/images/rug/washable-kitchen-3.jpg'
-    ],
-    __v: 0
-  }
+  
 ]
 
 const customersJson = [
@@ -353,17 +270,17 @@ const customersJson = [
 ];
 
 const orders = [{
-  customerId: "66509743c542c7a47f8ba955",
+  customerId: "6671f2f563ab2d6a3521aab7",
   products: [{
-    productId: "665094d1c542c7a47f8ba93d",
+    productId: "6671f2b463ab2d6a3521aa98",
     quantity: 2
   },
   {
-    productId: "665094d1c542c7a47f8ba93d",
+    productId: "6671f2b463ab2d6a3521aa9a",
     quantity: 3
   },
   {
-    productId: "665094d1c542c7a47f8ba93d",
+    productId: "6671f2b463ab2d6a3521aa99",
     quantity: 1
   }
 ],
@@ -399,6 +316,7 @@ export default async function Home() {
     image: images
   }
   return (
+  
     <div>
       {/* <Images carpet={carpet}  className={style.bckPi} /> */}
 
@@ -419,5 +337,6 @@ export default async function Home() {
         {/* <div>{JSON.stringify(cookiesss)}</div> */}
       </section>
     </div>
+  
   )
 }
