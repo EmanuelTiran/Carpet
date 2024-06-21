@@ -4,6 +4,7 @@
 
 body {
     background-color: var(--blue);
+    overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');

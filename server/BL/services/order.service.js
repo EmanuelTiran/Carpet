@@ -3,7 +3,7 @@ import { updateProduct, readProductById } from "@/server/DL/controllers/product.
 
 
 export const createOrderService = async (data) => {
-    console.log({data});
+    console.log("fdsfsdf----", data.products);
     data.products.forEach(async product => {
         console.log({product}, "😁😀🤔🤩🤗🙂☺😚😙");
         const requestedProduct = await readProductById(product.productId);

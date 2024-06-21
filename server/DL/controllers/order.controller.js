@@ -33,6 +33,7 @@ export async function readOrders1(filter, isPopulate) {
 
 
 export const readOrderById = (id) => Order.findById(id)
+
 export const createOrder = async (data) => {
     console.log(data);
     const order = await Order.create(data)
