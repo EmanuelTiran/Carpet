@@ -1,6 +1,8 @@
 .container {
     /* margin-top: 5rem; */
     width: 30%;
+    height: 90vh;
+    overflow: scroll;
     flex-shrink: 0;
     border: 1px solid var(--orange-yellow);
     padding: 1rem;

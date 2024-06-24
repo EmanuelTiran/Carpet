@@ -7,7 +7,7 @@ import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 
 
-export const createCarpetAction = async (fd) => {
+export const createProductAction = async (fd) => {
    let body = Object.fromEntries(fd)
    const images = [body.image1, body.image2, body.image3];
    console.log({ images });
@@ -18,20 +18,19 @@ export const createCarpetAction = async (fd) => {
    }
    try {
       await connectToMongo()
-      const newCarpet = await createProductService(body)
-      console.log(newCarpet.toObject());
-      revalidatePath('/carpet')
+      const newProduct = await createProductService(body)
+      console.log(newProduct.toObject());
+      // revalidatePath('/carpet')
    } catch (error) {
       console.log({ error });
    }
    // redirect('/')
 }
 
-export const updateCarpetAction = async (fd) => {
+export const updateProductAction = async (fd) => {
    let body = Object.fromEntries(fd)
    if (!body.id) {
-      console.log("safdsfc")
-      createCarpetAction(fd);
+      createProductAction(fd);
       return
    }
 
@@ -43,7 +42,7 @@ export const updateCarpetAction = async (fd) => {
       await connectToMongo()
       const updatedProduct = await updateProductByFieldService({ _id: body.id }, { $set: newBody })
       console.log(updatedProduct.toObject());
-      revalidatePath('/carpet')
+      // revalidatePath('/carpet')
    } catch (error) {
       console.log({ error });
    }

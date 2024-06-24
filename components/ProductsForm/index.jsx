@@ -1,6 +1,6 @@
 "use client"
 
-import { createCarpetAction, updateCarpetAction } from "@/server/BL/actions/carpet.action"
+import { updateProductAction } from "@/server/BL/actions/product.action"
 import style from "./style.module.css"
 
 export default function ProductsForm() {
@@ -10,8 +10,8 @@ export default function ProductsForm() {
    <div className={`${style.container} p-4 `}>
         <h1 className="text-2xl font-bold mb-4">Update Items</h1>
         
-        <form action={updateCarpetAction} className="space-y-4">
-        {/* <form action={createCarpetAction} className="space-y-4"> */}
+        <form action={updateProductAction} className="space-y-4">
+        {/* <form action={createProductAction} className="space-y-4"> */}
         <div>
           <label className="block text-sm font-medium text-gray-700">Product ID</label>
           <input

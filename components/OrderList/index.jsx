@@ -8,7 +8,7 @@ export default async function OrderList() {
     // unstable_noStore()
     await connectToMongo()
     const orderList = await readOrdersService({ status: "pending" });
-    console.log({ ...orderList[0] }, '😎😋😊😉');
+    // console.log({ ...orderList[0] }, '😎😋😊😉');
 
 
     return (

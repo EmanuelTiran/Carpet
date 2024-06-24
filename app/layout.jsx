@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { CartProvider } from "@/context/CartContext";
+import { connectToMongo } from "@/server/connectToMongo";
 
 
 
@@ -11,20 +12,25 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Create Emanuel App",
-  description: "Generated for sail of carpetim",
+  title: "Cool-floor",
+  description: "The largest site in Israel for carpets and parquets - the change starts from the bottom",
 };
 
 
+export default async function RootLayout({ children }) {
+  // const status = await connectToMongo();
 
-export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <CartProvider>
-          <Header />
-          {children}
-        </CartProvider>
+        {/* {status.isConnected ? */}
+          <CartProvider>
+            <Header />
+
+            {children}
+          </CartProvider> 
+         {/* : <h1>{status.message}</h1>}  */}
+        
       </body>
     </html>
   );

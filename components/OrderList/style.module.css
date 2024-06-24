@@ -1,6 +1,10 @@
 .container {
   /* margin-top: 5rem; */
-  width: 65%;
+  width: 67%;
+  scrollbar-color: var(--orange-yellow);
+  overflow-x: hidden;
+  height: 90vh;
+  overflow: scroll;
   flex-shrink: 0;
   border: 1px solid var(--orange-yellow);
   padding: 1rem;

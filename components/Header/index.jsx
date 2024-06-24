@@ -8,6 +8,7 @@ const linksList = [
    { href: '/about', text: 'About' },
    { href: '/admin/dashboard', text: 'Dashboard' },
    { href: '/recommendations', text: 'Recommendations' },
+   // { href: '/admin/login', text: 'Admin' },
 ]
 
 export default function Header() {

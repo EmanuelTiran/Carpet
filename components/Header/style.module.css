@@ -2,7 +2,7 @@
     height: 4rem;
     max-height: 4rem;
     width: 100%;
-    background-color: #374151;
+    background-color: var(--dark-blue);
     gap: 10rem;
     padding: 0.5rem;
     position: sticky;
@@ -19,7 +19,7 @@
     position: absolute;
     height: 100%;
     width: 95%;
-    background-color: #374151;
+    background-color:  var(--dark-blue);
     filter: blur(10px);
     animation: lightningAnimation 10s linear forwards;
 }

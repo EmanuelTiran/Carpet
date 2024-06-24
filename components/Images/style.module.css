@@ -3,11 +3,13 @@
         flex-direction: row;
         /* width: 50vw; */
         align-items: start;
+        /* padding: 4rem; */
+        height: 400px;
+        overflow: hidden;
+        border: var(--orange-yellow) 3px solid;
 }
 
-.container * {
-        color: var(--orange-yellow);
-}
 .img {
-        clip-path: inset(15% 0 15% 0);
+        /* clip-path: inset(15% 0 15% 0); */
+        /* height: 400px; */
 }

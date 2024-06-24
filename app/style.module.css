@@ -1,14 +1,16 @@
-.bckPi {
+.bckPic {
     /* position: fixed; */
-    animation: enlargeImage 5s 2 alternate;
     position: relative;
-    top: 4rem;
+    top: 1rem;
     z-index: -2;
+    animation: enlargeImage 5s 2 alternate;
+    height: 300px;
+    overflow: hidden;
 }
 
 .section {
     position: relative;
-    top: 4rem;
+    top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
@@ -20,6 +22,8 @@
     white-space: nowrap;
     text-overflow: ellipsis; 
 }
+
+
 
 .section img {
     clip-path: inset(10% 0 10% 0);
